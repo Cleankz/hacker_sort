@@ -1,12 +1,12 @@
 import random
 import time
 def MisterRobot( N, data):
-    flag = True
     start_time = time.time()
+    flag = True
     while flag:
         rand = random.randint(0,N-3)
         array = data[rand:rand+3]
-        for i in range(2):
+        for i in range(random.randint(1,3)):
             if array == sorted(array):
                 break
             else:
