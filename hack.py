@@ -2,6 +2,8 @@ import random
 import time
 def MisterRobot( N, data):
     start_time = time.time()
+    if data == sorted(data):
+        return True
     flag = True
     while flag:
         rand = random.randint(0,N-3)
@@ -13,6 +15,8 @@ def MisterRobot( N, data):
                 array.append(array.pop(0))
         data[rand:rand+3] = array[:3]
         if data == sorted(data) and time.time() - start_time <= 1:
+            return True
+        elif data == sorted(data) and time.time() - start_time > 1:
             return True
         elif data != sorted(data) and time.time() - start_time > 1:
             return False
