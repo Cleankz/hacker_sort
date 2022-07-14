@@ -4,7 +4,7 @@ def MisterRobot( N, data):
     start_time = time.time()
     if data == sorted(data):
         return True
-    flag = True
+    done = True # flag - done
     while flag:
         rand = random.randint(0,N-3)
         array = data[rand:rand+3]
