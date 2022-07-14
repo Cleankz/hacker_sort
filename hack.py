@@ -5,7 +5,7 @@ def MisterRobot( N, data):
     if data == sorted(data):
         return True
     done = True # flag - done
-    while flag:
+    while done:
         rand = random.randint(0,N-3)
         array = data[rand:rand+3]
         for i in range(random.randint(1,3)):
